@@ -1,4 +1,4 @@
-# 🔮 Kronos CS2 皮肤价格预测（本项目处于开发阶段）
+# 🔮 Kronos CS2 皮肤价格预测
 
 > **使用 Kronos（首个开源金融 K 线基础模型）预测 CS2 皮肤价格走势的开源项目**
 
@@ -38,7 +38,7 @@ Kronos 将价格时序视为一种“金融语言”（K 线序列）。我们�
 
 ```mermaid
 graph LR
-    A[用户上传 OHLC CSV] --> B[model/KronosPredictor]
+    A[用户上传 OHLC/OHLCVA CSV] --> B[model/KronosPredictor]
     B --> C{设备: MPS/CPU/CUDA}
     C --> D[Kronos-small]
     D --> E[未来 N 天预测]
@@ -70,14 +70,14 @@ pip install -r requirements.txt
 # 生成合成示例数据
 python examples/generate_synthetic_skin.py
 
-# 运行预测（仅 OHLC）
+# 运行示例OHLC数据预测
 python examples/prediction_example.py
 
-# 运行预测（含 volume/amount）
+# 运行示例OHLCVA数据预测（含 volume/amount）
 python examples/prediction_full_example.py
 ```
 
-你将看到一张图表，对比历史价格与预测价格 —— 全程在本地运行（自动启用 Metal 加速，如支持）。
+你将看到结果图表，对比历史价格与预测价格 —— 全程在本地运行（自动启用 Metal 加速，如支持）。
 
 ---
 
@@ -87,12 +87,12 @@ python examples/prediction_full_example.py
 Kronos-CS2-Skins-Forecast/
 ├── model/                          # Kronos 官方模型代码（来自 shiyu-coder/Kronos）
 ├── examples/
-│   ├── generate_synthetic_skin.py  # 生成合成数据（含 OHLC / OHLCV）
-│   ├── synthetic_skin_data.csv     # 合成数据（仅 OHLC）
-│   ├── synthetic_skin_full.csv     # 合成数据（含 volume/amount）
-│   ├── prediction_example.py       # 仅 OHLC 的预测示例
-│   └── prediction_full_example.py  # 含 volume/amount 的预测示例
-├── src/predictor.py                # 核心预测逻辑（开发中）
+│   ├── generate_synthetic_skin.py  # 生成合成数据（含 OHLC / OHLCVA）
+│   ├── synthetic_skin_data.csv     # 合成的OHLC数据
+│   ├── synthetic_skin_full.csv     # 合成的OHLCVA数据预测（含 volume/amount）
+│   ├── prediction_example.py       # 示例OHLC数据预测
+│   └── prediction_full_example.py  # 示例OHLCVA数据预测（含 volume/amount）
+├── src/predictor.py                # 核心预测逻辑
 ├── demo/app.py                     # Gradio Web 界面（开发中）
 ├── README.md
 ├── requirements.txt
