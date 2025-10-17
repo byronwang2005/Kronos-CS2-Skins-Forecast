@@ -96,6 +96,7 @@ Kronos-CS2-Skins-Forecast/
 ├── demo/app.py                     # Gradio Web 界面（开发中）
 ├── README.md
 ├── requirements.txt
+├── .gitignore
 └── LICENSE                         # MIT 许可证
 ```
 
