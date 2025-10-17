@@ -10,13 +10,13 @@ from src.predictor import CS2SkinPredictor
 
 
 def plot_prediction(hist_df, pred_df, pred_len):
-    hist_close = hist_df['close'].iloc[-pred_len:]
-    hist_time = hist_df['timestamps'].iloc[-pred_len:]
+    hist_close = hist_df['close'].iloc[-3*pred_len:]
+    hist_time = hist_df['timestamps'].iloc[-3*pred_len:]
     pred_close = pred_df['close']
     pred_time = pred_df.index
 
     plt.figure(figsize=(12, 5))
-    plt.plot(hist_time, hist_close, label=f'Historical Price (The Last {pred_len} Days)', color='steelblue', linewidth=2)
+    plt.plot(hist_time, hist_close, label=f'Historical Price (The Last {3*pred_len} Days)', color='steelblue', linewidth=2)
     plt.plot(pred_time, pred_close, label=f'Forecast Price (The Next {pred_len} days)', color='crimson', linestyle='--', linewidth=2)
     plt.ylabel('Price (USD)', fontsize=12)
     plt.title('Forecast of CS2 Skin Prices and Trading Volumes(OHLC) - Kronos', fontsize=14)

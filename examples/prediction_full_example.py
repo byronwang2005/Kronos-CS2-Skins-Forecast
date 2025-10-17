@@ -13,8 +13,8 @@ def plot_prediction_full(hist_df, pred_df, pred_len):
     fig, ax1 = plt.subplots(figsize=(12, 6))
 
     # 价格
-    hist_close = hist_df['close'].iloc[-pred_len:]
-    hist_time = hist_df['timestamps'].iloc[-pred_len:]
+    hist_close = hist_df['close'].iloc[-3*pred_len:]
+    hist_time = hist_df['timestamps'].iloc[-3*pred_len:]
     pred_close = pred_df['close']
     pred_time = pred_df.index
 
@@ -26,7 +26,7 @@ def plot_prediction_full(hist_df, pred_df, pred_len):
 
     # 成交量（次坐标轴）
     ax2 = ax1.twinx()
-    hist_vol = hist_df['volume'].iloc[-pred_len:]
+    hist_vol = hist_df['volume'].iloc[-3*pred_len:]
     pred_vol = pred_df['volume']
     ax2.bar(hist_time, hist_vol, width=0.8, alpha=0.3, color='gray', label='Historical Trading Volume')
     ax2.bar(pred_time, pred_vol, width=0.8, alpha=0.6, color='orange', label='Forecast Trading Volume')
