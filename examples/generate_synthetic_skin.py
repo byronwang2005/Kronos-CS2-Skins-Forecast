@@ -2,11 +2,11 @@ import os
 import numpy as np
 import pandas as pd
 
-def generate_synthetic_skin_data(days: int = 300, seed: int = 42):
+def generate_synthetic_skin_data(days,seed):
     np.random.seed(seed)
     
-    # 时间戳：从 2024-01-01 开始的连续交易日
-    timestamps = pd.date_range("2024-01-01", periods=days, freq="D")
+    # 时间戳：从 2021-01-01 开始的连续交易日
+    timestamps = pd.date_range("2021-01-01", periods=days, freq="D")
     
     # 初始价格（例如：$10 的皮肤）
     price = 10.0
@@ -14,8 +14,8 @@ def generate_synthetic_skin_data(days: int = 300, seed: int = 42):
     
     # 模拟价格：随机游走 + 小幅趋势 + 噪声
     for _ in range(1, days):
-        # 日收益率：均值 0.01%（微涨趋势），标准差 2%
-        daily_return = np.random.normal(loc=0.0001, scale=0.02)
+        # 日收益率：均值 0.00%（微涨趋势），标准差 2%
+        daily_return = np.random.normal(loc=0.0000, scale=0.02)
         price *= (1 + daily_return)
         price = max(price, 0.1)  # 价格不能为负或过低
         prices.append(price)
@@ -44,7 +44,7 @@ def main():
     os.makedirs("examples", exist_ok=True)
     
     # 生成数据
-    df_full = generate_synthetic_skin_data(days=300, seed=42)
+    df_full = generate_synthetic_skin_data(days=1000, seed=42)
     
     # 保存完整版（含 volume/amount）
     full_path = "examples/synthetic_skin_full.csv"
