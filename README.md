@@ -15,13 +15,11 @@
 
 ---
 
-## ⚠️ 免责声明
+## ⚠️ 改进计划
 
-> **本项目不提供真实的 CS2 皮肤价格数据。**  
-> - 我们**不会爬取** Steam、steamcommunity.com 或任何第三方网站。  
-> - 所有预测结果**仅用于研究与教育目的**，**不构成任何投资或交易建议**。  
-> - 用户需自行确保其数据来源符合 [Steam Web API 使用条款](https://developer.valvesoftware.com/wiki/Steam_Web_API) 及 [Steam 用户协议](https://store.steampowered.com/subscriber_agreement/)。  
-> - 本项目作者**与 Valve、Steam 或 CS2 无任何关联**。
+- 修改 `predictor.py` 支持 batch
+- 获得更高质量数据集的支持
+- 制作在线demo
 
 ---
 
@@ -134,6 +132,16 @@ Kronos-CS2-Skins-Forecast/
   primaryClass={q-fin.ST}
 }
 ```
+
+---
+
+## ⚠️ 免责声明
+
+> **本项目不提供真实的 CS2 皮肤价格数据。**  
+> - 我们**不会爬取** Steam、steamcommunity.com 或任何第三方网站。  
+> - 所有预测结果**仅用于研究与教育目的**，**不构成任何投资或交易建议**。  
+> - 用户需自行确保其数据来源符合 [Steam Web API 使用条款](https://developer.valvesoftware.com/wiki/Steam_Web_API) 及 [Steam 用户协议](https://store.steampowered.com/subscriber_agreement/)。  
+> - 本项目作者**与 Valve、Steam 或 CS2 无任何关联**。
 
 ---
 
