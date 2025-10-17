@@ -1,0 +1,14 @@
+# Core dependencies
+torch>=2.0
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+transformers>=4.35
+
+# Web demo (choose one)
+gradio>=4.0  # Recommended for simplicity
+# streamlit>=1.30  # Uncomment if you prefer Streamlit
+
+# Kronos-specific (from original repo)
+# Note: Kronos uses a custom model class, so we rely on its code structure,
+# not a PyPI package. No extra install needed beyond torch/transformers.
