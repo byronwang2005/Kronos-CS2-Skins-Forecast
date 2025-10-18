@@ -101,8 +101,8 @@ python examples/prediction_full_example.py
 Kronos-CS2-Skins-Forecast/
 ├── model/                          # Kronos 官方模型代码（来自 shiyu-coder/Kronos）
 ├── examples/
-│   ├── generate_synthetic_skin.py  # 生成单皮肤OHLC+OHLCVA示例数据
-│   ├── generate_500_skins.py       # 生成500个皮肤OHLC+OHLCVA示例数据
+│   ├── generate_synthetic_skin.py  # 生成单皮肤 OHLC+OHLCVA 示例数据
+│   ├── generate_500_skins.py       # 生成 500 个皮肤 OHLC+OHLCVA 示例数据
 │   ├── data/                       # 合成/预测的数据
 │   │   ├── synthetic_skin_ohlc.csv
 │   │   ├── synthetic_skin_full.csv
@@ -110,11 +110,11 @@ Kronos-CS2-Skins-Forecast/
 │   │   ├── synthetic_500_skins_full.csv
 │   │   ├── predictions_500_skins.csv
 │   │   └── predictions_500_skins_full.csv
-│   ├── prediction_example.py       # 示例OHLC数据预测
-│   └── prediction_full_example.py  # 示例OHLCVA数据预测
+│   ├── prediction_example.py       # 示例 OHLC 数据预测
+│   └── prediction_full_example.py  # 示例 OHLCVA 数据预测
 ├── src/predictor.py                # 核心预测逻辑
 ├── figures/
-├── app.py                          # Gradio Web 界面（开发中）
+├── app.py                          # Gradio 界面，在本 repo 的文件可能并非最新版本
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
@@ -130,6 +130,7 @@ Kronos-CS2-Skins-Forecast/
 - `matplotlib`  
 - `gradio`  
 - `transformers`（用于加载 Kronos）  
+- ......
 
 详见 [`requirements.txt`](requirements.txt)。
 
