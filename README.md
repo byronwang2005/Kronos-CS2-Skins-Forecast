@@ -79,6 +79,10 @@ python examples/prediction_full_example.py
 
 你将看到结果图表，对比历史价格与预测价格 —— 全程在本地运行（自动启用 Metal 加速，如支持）。
 
+以下是一个基于500个皮肤示例数据生成的预测（OHLC vs. OHLCVA）：
+
+![对比图](https://github.com/byronwang2005/Kronos-CS2-Skins-Forecast/blob/main/figures/figure_ohlc_vs_ohlcva.png)
+
 ---
 
 ## 📁 仓库结构
