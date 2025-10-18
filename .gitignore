@@ -6,5 +6,5 @@ __pycache__/
 *$py.class
 .ipynb_checkpoints/
 # Ignore large synthetic data files
-examples/data/
-*.csv
+# examples/data/
+# *.csv
