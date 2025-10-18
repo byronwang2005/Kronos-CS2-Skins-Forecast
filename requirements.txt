@@ -8,6 +8,7 @@ transformers>=4.35
 # Web demo (choose one)
 gradio>=4.0  # Recommended for simplicity
 # streamlit>=1.30  # Uncomment if you prefer Streamlit
+accelerate
 
 # Kronos-specific (from original repo)
 # Note: Kronos uses a custom model class, so we rely on its code structure,
