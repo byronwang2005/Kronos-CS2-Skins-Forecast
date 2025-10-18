@@ -17,7 +17,6 @@
 
 ## ⚠️ 改进计划
 
-- 修改 `predictor.py` 支持 batch
 - 获得更高质量数据集的支持
 - 制作在线demo
 
@@ -27,10 +26,10 @@
 
 Kronos 将价格时序视为一种“金融语言”（K 线序列）。我们的流程如下：
 
-1. 用户上传历史皮肤价格 CSV（需包含 `timestamps, open, high, low, close`）  
+1. 用户上传历史皮肤价格 CSV（需包含 `timestamps, open, high, low, close`，可选 `volumn, amount`）  
 2. 数据输入 **Kronos-small**（2470 万参数）—— 一个预训练的基础模型  
 3. 模型生成未来 N 天的价格预测（支持概率采样）  
-4. 可视化结果（图表 + JSON）
+4. 可视化结果
 
 ### 架构图
 
@@ -65,8 +64,11 @@ conda activate kronos
 # 安装依赖
 pip install -r requirements.txt
 
-# 生成合成示例数据
-python examples/generate_synthetic_skin.py
+# 生成单皮肤OHLC+OHLCVA示例数据，备用
+# python examples/generate_synthetic_skin.py
+
+# 生成500个皮肤OHLC+OHLCVA示例数据，主用
+python examples/generate_500_skins.py
 
 # 运行示例OHLC数据预测
 python examples/prediction_example.py
@@ -85,12 +87,19 @@ python examples/prediction_full_example.py
 Kronos-CS2-Skins-Forecast/
 ├── model/                          # Kronos 官方模型代码（来自 shiyu-coder/Kronos）
 ├── examples/
-│   ├── generate_synthetic_skin.py  # 生成合成数据（含 OHLC / OHLCVA）
-│   ├── synthetic_skin_data.csv     # 合成的OHLC数据
-│   ├── synthetic_skin_full.csv     # 合成的OHLCVA数据预测（含 volume/amount）
+│   ├── generate_synthetic_skin.py  # 生成单皮肤OHLC+OHLCVA示例数据
+│   ├── generate_500_skins.py       # 生成500个皮肤OHLC+OHLCVA示例数据
+│   ├── data/                       # 合成/预测的数据
+│   │   ├── synthetic_skin_ohlc.csv
+│   │   ├── synthetic_skin_full.csv
+│   │   ├── synthetic_500_skins_ohlc.csv
+│   │   ├── synthetic_500_skins_full.csv
+│   │   ├── predictions_500_skins.csv
+│   │   └── predictions_500_skins_full.csv
 │   ├── prediction_example.py       # 示例OHLC数据预测
-│   └── prediction_full_example.py  # 示例OHLCVA数据预测（含 volume/amount）
+│   └── prediction_full_example.py  # 示例OHLCVA数据预测
 ├── src/predictor.py                # 核心预测逻辑
+├── figures/
 ├── demo/app.py                     # Gradio Web 界面（开发中）
 ├── README.md
 ├── requirements.txt
