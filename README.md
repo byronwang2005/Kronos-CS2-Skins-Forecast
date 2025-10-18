@@ -1,3 +1,15 @@
+---
+title: Kronos CS2 Skin Forecast
+emoji: 🔮
+colorFrom: blue
+colorTo: purple
+sdk: gradio
+sdk_version: "4.35.0"
+app_file: app.py
+pinned: false
+suggested_hardware: cpu-basic
+python_version: "3.10"
+---
 # 🔮 Kronos CS2 皮肤价格预测
 
 > **使用 Kronos（首个开源金融 K 线基础模型）预测 CS2 皮肤价格走势的开源项目**
