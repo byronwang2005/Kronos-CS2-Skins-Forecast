@@ -1,3 +1,4 @@
+<!-- 
 ---
 title: Kronos CS2 Skin Forecast
 emoji: 🔮
@@ -6,10 +7,12 @@ colorTo: purple
 sdk: gradio
 sdk_version: "4.35.0"
 app_file: app.py
-pinned: false
-suggested_hardware: cpu-basic
 python_version: "3.10"
+suggested_hardware: cpu-basic
+pinned: false
 ---
+-->
+
 # 🔮 Kronos CS2 皮肤价格预测
 
 > **使用 Kronos（首个开源金融 K 线基础模型）预测 CS2 皮肤价格走势的开源项目**
@@ -116,7 +119,7 @@ Kronos-CS2-Skins-Forecast/
 │   └── prediction_full_example.py  # 示例OHLCVA数据预测
 ├── src/predictor.py                # 核心预测逻辑
 ├── figures/
-├── demo/app.py                     # Gradio Web 界面（开发中）
+├── app.py                          # Gradio Web 界面（开发中）
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
