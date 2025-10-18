@@ -1,23 +1,18 @@
-<!-- 
----
-title: Kronos CS2 Skin Forecast
-emoji: 🔮
-colorFrom: blue
-colorTo: purple
-sdk: gradio
-sdk_version: "4.35.0"
-app_file: app.py
-python_version: "3.10"
-suggested_hardware: cpu-basic
-pinned: false
----
--->
-
 # 🔮 Kronos CS2 皮肤价格预测
 
 > **使用 Kronos（首个开源金融 K 线基础模型）预测 CS2 皮肤价格走势的开源项目**
 
 本项目演示如何将 **Kronos** —— 一个在 45+ 全球交易所数据上预训练的时序大模型 —— 迁移应用于 **CS2 皮肤价格趋势预测**。我们提供了一个**干净、可复现、合规**的分析工具，适用于研究与教育目的。
+
+---
+
+## 🌐 在线 Demo
+
+试用我们的 Web 演示（基于 Gradio）来上传皮肤价格 CSV 并查看 Kronos 预测结果。
+
+点击下方徽章，在 Hugging Face Spaces 中直接试用本项目：
+
+[![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-md-dark.svg)](https://huggingface.co/spaces/ByronWang2005/Kronos-CS2-Skins-Forecast-Demo)
 
 ---
 
