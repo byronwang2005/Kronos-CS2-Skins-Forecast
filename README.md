@@ -14,6 +14,8 @@
 
 [![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-md-dark.svg)](https://huggingface.co/spaces/ByronWang2005/Kronos-CS2-Skins-Forecast-Demo)
 
+![demo图](https://github.com/byronwang2005/Kronos-CS2-Skins-Forecast/blob/main/figures/figure_demo.png)
+
 ---
 
 ## 🎯 项目目标
@@ -28,7 +30,6 @@
 ## ⚠️ 改进计划
 
 - 获得更高质量数据集的支持
-- 制作在线demo
 
 ---
 
