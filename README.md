@@ -1,4 +1,4 @@
-# 🔮 Kronos CS2 皮肤价格预测
+# Kronos CS2 皮肤价格预测
 
 > **使用 Kronos（首个开源金融 K 线基础模型）预测 CS2 皮肤价格走势的开源项目**
 
@@ -6,7 +6,7 @@
 
 ---
 
-## 🌐 在线 Demo
+## 在线 Demo
 
 试用我们的 Web 演示（基于 Gradio）来上传皮肤价格 CSV 并查看 Kronos 预测结果。
 
@@ -18,22 +18,22 @@
 
 ---
 
-## 🎯 项目目标
+## 项目目标
 
 - 展示**金融时序大模型**在游戏资产预测中的跨领域迁移能力  
 - 构建一个**开源、合规、可演示**的端到端预测工具  
 
-> ✅ **本项目不包含、也不提供任何真实皮肤价格数据**。用户需自行提供合规数据（例如：从 Steam 社区市场手动导出）。
+> **本项目不包含、也不提供任何真实皮肤价格数据**。用户需自行提供合规数据（例如：从 Steam 社区市场手动导出）。
 
 ---
 
-## ⚠️ 改进计划
+## 改进计划
 
 - 获得更高质量数据集的支持
 
 ---
 
-## 🧠 工作原理
+## 工作原理
 
 Kronos 将价格时序视为一种“金融语言”（K 线序列）。我们的流程如下：
 
@@ -55,7 +55,7 @@ graph LR
 
 ---
 
-## 🚀 快速开始（本地运行）
+## 快速开始（本地运行）
 
 ### 前置要求
 - Python ≥ 3.10  
@@ -96,7 +96,7 @@ python examples/prediction_full_example.py
 
 ---
 
-## 📁 仓库结构
+## 仓库结构
 
 ```
 Kronos-CS2-Skins-Forecast/
@@ -124,7 +124,7 @@ Kronos-CS2-Skins-Forecast/
 
 ---
 
-## 📦 依赖项
+## 依赖项
 
 - `torch`（支持 Apple Silicon 的 MPS）  
 - `pandas`, `numpy`  
@@ -137,7 +137,7 @@ Kronos-CS2-Skins-Forecast/
 
 ---
 
-## 🤝 致谢
+## 致谢
 
 本项目基于：
 
@@ -160,7 +160,7 @@ Kronos-CS2-Skins-Forecast/
 
 ---
 
-## ⚠️ 免责声明
+## 免责声明
 
 > **本项目不提供真实的 CS2 皮肤价格数据。**  
 > - 我们**不会爬取** Steam、steamcommunity.com 或任何第三方网站。  
@@ -170,14 +170,14 @@ Kronos-CS2-Skins-Forecast/
 
 ---
 
-## 📄 开源协议
+## 开源协议
 
 本项目采用 MIT 协议开源，详见 [LICENSE](LICENSE) 文件。
 继承自 [Kronos](https://github.com/shiyu-coder/Kronos) 的开源协议。
 
 ---
 
-## 📬 反馈与贡献
+## 反馈与贡献
 
 欢迎提交 PR，例如：
 - 改进 UI/UX  
