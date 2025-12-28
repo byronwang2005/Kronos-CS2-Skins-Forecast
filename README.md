@@ -1,14 +1,12 @@
-# Kronos CS2 皮肤价格预测
+# Kronos CS2 皮肤价格预测 DEMO
 
-> **使用 Kronos（首个开源金融 K 线基础模型）预测 CS2 皮肤价格走势的开源项目**
-
-本项目演示如何将 **Kronos** —— 一个在 45+ 全球交易所数据上预训练的时序大模型 —— 迁移应用于 **CS2 皮肤价格趋势预测**。
+> 本项目演示如何将 **Kronos** —— 一个在 45+ 全球交易所数据上预训练的时序大模型 —— 迁移应用于 **CS2 皮肤价格趋势预测**。
 
 ---
 
-## 在线 Demo
+## Web Demo
 
-试用我们的 Web 演示（基于 Gradio）来上传皮肤价格 CSV 并查看 Kronos 预测结果。
+试用基于 Gradio 的 Web 演示来上传皮肤价格 CSV 并查看 Kronos 预测结果。
 
 点击下方徽章，在 Hugging Face Spaces 中直接试用本项目：
 
@@ -18,32 +16,7 @@
 
 ---
 
-## 项目目标
-
-- 展示**金融时序大模型**在游戏资产预测中的跨领域迁移能力  
-- 构建一个**开源、合规、可演示**的端到端预测工具  
-
-> **本项目不包含、也不提供任何真实皮肤价格数据**。用户需自行提供合规数据（例如：从 Steam 社区市场手动导出）。
-
----
-
-## 改进计划
-
-- 获得更高质量数据集的支持 
-- 添加回测功能
-
----
-
-## 工作原理
-
-Kronos 将价格时序视为一种“金融语言”（K 线序列）。我们的流程如下：
-
-1. 用户上传历史皮肤价格 CSV（需包含 `timestamps, open, high, low, close`，可选 `volumn, amount`）  
-2. 数据输入 **Kronos-small**（2470 万参数）—— 一个预训练的基础模型  
-3. 模型生成未来 N 天的价格预测（支持概率采样）  
-4. 可视化结果
-
-### 架构图
+## 架构图
 
 ```mermaid
 graph LR
@@ -161,23 +134,12 @@ Kronos-CS2-Skins-Forecast/
 
 ---
 
-## 免责声明
-
-> **本项目不提供真实的 CS2 皮肤价格数据。**  
-> - 我们**不会爬取** Steam、steamcommunity.com 或任何第三方网站。  
-> - 所有预测结果**仅用于研究与教育目的**，**不构成任何投资或交易建议**。  
-> - 用户需自行确保其数据来源符合 [Steam Web API 使用条款](https://developer.valvesoftware.com/wiki/Steam_Web_API) 及 [Steam 用户协议](https://store.steampowered.com/subscriber_agreement/)。  
-> - 本项目作者**与 Valve、Steam 或 CS2 无任何关联**。
-
----
-
 ## 开源协议
 
 本项目采用 MIT 协议开源，详见 [LICENSE](LICENSE) 文件。
 继承自 [Kronos](https://github.com/shiyu-coder/Kronos) 的开源协议。
 
 ---
-
 
 **Made with ❤️ for CS2 skin lovers**  
 By Byron | [GitHub](https://github.com/byronwang2005/Kronos-CS2-Skins-Forecast)
